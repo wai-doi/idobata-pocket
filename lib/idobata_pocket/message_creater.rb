@@ -1,7 +1,7 @@
 module IdobataPocket
   class MessageCreation
-    CALL_API_LIMIT = 100
-    COUNT = 100
+    CALL_API_LIMIT = 50
+    COUNT = 200
 
     def self.create_message
       new.create_message
