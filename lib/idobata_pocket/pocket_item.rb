@@ -1,10 +1,11 @@
 module IdobataPocket
   class PocketItem
-    attr_reader :title, :url
+    attr_reader :title, :url, :original
 
     def initialize(args)
-      @title = args['given_title']
-      @url = args['given_url']
+      @title = args['resolved_title']
+      @url = args['resolved_url']
+      @original = args
     end
   end
 end
