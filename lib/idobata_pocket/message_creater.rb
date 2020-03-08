@@ -14,7 +14,7 @@ module IdobataPocket
     def create_message
       call_pocket_api
       item = @items.sample
-      "#{item.title}\n#{item.url}"
+      "( ¯−¯ )つ #{item.title}\n#{item.url}"
     end
 
     private
