@@ -27,5 +27,5 @@ jobs:
         bundle exec rake send_random_item
       env:
         IDOBATA_ENDPOINT_URL: ${{ secrets.IDOBATA_ENDPOINT_URL }}
-        POCKET_COMSUMER_KEY: ${{ secrets.POCKET_COMSUMER_KEY }}
+        POCKET_CONSUMER_KEY: ${{ secrets.POCKET_CONSUMER_KEY }}
         POCKET_ACCESS_TOKEN: ${{ secrets.POCKET_ACCESS_TOKEN }}
