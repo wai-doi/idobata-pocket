@@ -2,6 +2,8 @@
 name: send_ramdom_item
 
 on:
+  watch:
+    types: [started]
   schedule:
     - cron: '0 0 * * *' 
 
