@@ -14,7 +14,7 @@ module IdobataPocket
     def create_message
       call_pocket_api
       item = @items.sample
-      "( ¯−¯ )つ #{item.title}\n#{item.url}"
+      link_text(text: item.title, url: item.url)
     end
 
     private
@@ -28,6 +28,17 @@ module IdobataPocket
         break if items.size != COUNT
         sleep 0.1
       end
+    end
+
+    def link_text(text:, url:)
+      <<~HTML
+      <p>
+        ( ¯−¯ )つ
+        <a href="#{url}" target="_blank">
+          #{text}
+        </a>
+      </p>
+      HTML
     end
   end
 end

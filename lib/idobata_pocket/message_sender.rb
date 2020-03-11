@@ -12,7 +12,7 @@ module IdobataPocket
     end
 
     def send
-      params = { source: @message }
+      params = { source: @message, format: 'html' }
       http.post(@uri.path, URI.encode_www_form(params))
     end
 
