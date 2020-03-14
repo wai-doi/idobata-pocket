@@ -2,8 +2,8 @@ require 'uri'
 
 module IdobataPocket
   class MessageSender
-    def self.send(message)
-      new(message).send
+    def self.call(message)
+      new(message).call
     end
 
     def initialize(message)
@@ -11,7 +11,7 @@ module IdobataPocket
       @uri = URI.parse(ENV['IDOBATA_ENDPOINT_URL'])
     end
 
-    def send
+    def call
       params = { source: @message, format: 'html' }
       http.post(@uri.path, URI.encode_www_form(params))
     end

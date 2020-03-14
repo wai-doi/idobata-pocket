@@ -1,5 +1,5 @@
 require_relative 'idobata_pocket/message_sender.rb'
-require_relative 'idobata_pocket/message_creater.rb'
-require_relative 'idobata_pocket/pocket_client.rb'
+require_relative 'idobata_pocket/message_creator.rb'
+require_relative 'idobata_pocket/pocket_retrieving_client.rb'
 require_relative 'idobata_pocket/pocket_item.rb'
 require_relative 'idobata_pocket/response_parser.rb'
