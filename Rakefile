@@ -1,5 +1,5 @@
-require 'dotenv/load'
-require 'pry'
+require 'bundler/setup'
+Bundler.require
 require_relative 'lib/idobata_pocket'
 
 include IdobataPocket
