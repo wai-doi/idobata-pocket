@@ -3,7 +3,7 @@ name: send_ramdom_item
 
 on:
   schedule:
-    - cron: '0 12 * * 1-5' 
+    - cron: '0 12 * * 1-5'
 
 jobs:
   build:
@@ -12,16 +12,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Ruby 2.6.5
+    - name: Set up Ruby 2.7
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.6.5
+        ruby-version: 2.7.x
     - name: Build
       run: |
         gem install bundler
         bundle install --jobs 4 --retry 3
     - name: Execute Rake task
-      run: 
+      run:
         bundle exec rake send_random_item
       env:
         IDOBATA_ENDPOINT_URL: ${{ secrets.IDOBATA_ENDPOINT_URL }}
