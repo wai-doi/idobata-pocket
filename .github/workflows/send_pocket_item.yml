@@ -1,5 +1,4 @@
-
-name: send_ramdom_item
+name: send_pocket_item
 
 on:
   schedule:
